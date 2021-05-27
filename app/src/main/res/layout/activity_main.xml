@@ -9,10 +9,14 @@
     tools:context=".MainActivity" >
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/randomcardview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="0.333"
         app:cardCornerRadius="8dp"
+        app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -56,7 +60,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/Constellation_CardView"
+        android:id="@+id/constellationcardview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="2dp"
@@ -67,6 +71,7 @@
         app:cardUseCompatPadding="true">
 
         <LinearLayout
+            android:id="@+id/CardConstellation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center|right"
@@ -107,9 +112,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardConstellation"
+        android:id="@+id/namecardview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="0.333"
         app:cardCornerRadius="8dp"
         app:cardPreventCornerOverlap="true"

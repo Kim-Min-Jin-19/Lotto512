@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -36,7 +37,8 @@
         android:layout_marginRight="16dp"
         android:layout_toRightOf="@id/imageView3"
         android:gravity="center"
-        android:text="쌍둥이 자리"
+        android:text="쌍둥이자리"
+
         android:textSize="36sp" />
 
     <DatePicker
@@ -47,4 +49,6 @@
         android:layout_marginBottom="125dp"
         android:calendarViewShown="false"
         android:datePickerMode="spinner" />
+
 </RelativeLayout>
+

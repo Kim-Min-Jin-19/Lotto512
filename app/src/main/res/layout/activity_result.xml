@@ -11,28 +11,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".3" />
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".5" />
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".08" />
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.08" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".92" />
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.92" />
 
     <view
         android:id="@+id/resultLabel"
@@ -41,7 +45,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:maxLines="3"
-        android:text="로또 번호입니다.로또 번호입니다.로또 번호입니다.로또 번호입니다."
+        android:text="로또번호입니다 로또번호입니다 로또번호입니다 로또번호입니다"
         android:textSize="60sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/guideline1"
@@ -117,11 +121,12 @@
         android:id="@+id/imageView7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/guideline3"
         app:layout_constraintRight_toLeftOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1"
         app:srcCompat="@drawable/money" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
