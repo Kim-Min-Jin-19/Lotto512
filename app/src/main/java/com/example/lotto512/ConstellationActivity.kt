@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CalendarView
 import android.widget.DatePicker
 import android.widget.TextView
 import java.text.SimpleDateFormat
@@ -33,7 +34,7 @@ class ConstellationActivity : AppCompatActivity() {
         val btnGoResultConstell = findViewById<Button>(R.id.btnGoResultConstell)
         val datePicker = findViewById<DatePicker>(R.id.datePicker)
         val txtConstell = findViewById<TextView>(R.id.txtConstell)
-        txtConstell.text = makeConstellationString(datePicker.month +1, datePicker.dayOfMonth)
+        txtConstell.text = makeConstellationString(datePicker.month + 1, datePicker.dayOfMonth)
 
         btnGoResultConstell.setOnClickListener {
             val intent = Intent(this, ResultActivity::class.java)
@@ -44,11 +45,25 @@ class ConstellationActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+        val calendar = Calendar.getInstance()
+
+        datePicker.init(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH),
+                object : CalendarView.OnDateChangeListener, DatePicker.OnDateChangedListener {
+                    override fun onSelectedDayChange(p0: CalendarView, year: Int, month: Int, dayOfMonth: Int
+                    ) {
+                    }
+
+                    override fun onDateChanged(p0: DatePicker?, year: Int, month: Int, dayOfMonth: Int
+                    ) {
+                        txtConstell.text = makeConstellationString(datePicker.month, datePicker.dayOfMonth)
+                    }
+                }
+        )
+
     }
 
-}
     private fun makeConstellationString(month: Int, dayOfMonth: Int): String {
-        val target = "${month+1}${String.format("%02d", dayOfMonth)}".toInt()
+        val target = "${month + 1}${String.format("%02d", dayOfMonth)}".toInt()
 
         when (target) {
             in 101..119 -> return "염소자리"
@@ -67,3 +82,4 @@ class ConstellationActivity : AppCompatActivity() {
             else -> return "기타별자리"
         }
     }
+}
