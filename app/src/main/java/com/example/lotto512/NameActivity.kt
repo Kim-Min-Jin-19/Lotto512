@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.lotto512.R
-import com.example.lotto512.ResultActivity
-
 
 class NameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +14,7 @@ class NameActivity : AppCompatActivity() {
         val btnGoResultConstell= findViewById<Button>(R.id.btnGoResultName)
         val btnBack = findViewById<Button>(R.id.btnBack)
         btnGoResultConstell.setOnClickListener {
-            startActivity(Intent(this,ResultActivity::class.java))
+            startActivity(Intent(this, ResultActivity::class.java))
         }
         btnBack.setOnClickListener {
             finish()

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
 import com.example.lotto.ConstellationActivity
-import com.example.lotto.ResultActivity
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -61,7 +60,7 @@ fun getRandomLottoNumbers(): MutableList<Int> {
     }
     return lottoNumbers
 }
-    fun getShuffledLottoNumbers(toString: String): MutableList<Int> {
+    fun getShuffledLottoNumbers(): MutableList<Int> {
     val lottoNumbers = mutableListOf<Int>()
 
     for (number in 1..45) {
@@ -84,11 +83,11 @@ fun getRandomLottoNumbers(): MutableList<Int> {
             }
             val cardConstellation = findViewById<CardView>(R.id.constellationcardview)
             cardConstellation.setOnClickListener {
-                startActivity(Intent(this, ConstellationActivity::class.java))
+                startActivity(Intent(this@MainActivity, ConstellationActivity::class.java))
             }
             val cardName = findViewById<CardView>(R.id.namecardview)
             cardName.setOnClickListener {
-                startActivity(Intent(this, NameActivity::class.java))
+                startActivity(Intent(this@MainActivity, NameActivity::class.java))
             }
         }
     }
