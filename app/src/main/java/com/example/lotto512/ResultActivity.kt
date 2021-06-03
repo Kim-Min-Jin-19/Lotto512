@@ -7,7 +7,6 @@ import android.widget.TextView
 import java.text.SimpleDateFormat
 import java.util.*
 
-
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
