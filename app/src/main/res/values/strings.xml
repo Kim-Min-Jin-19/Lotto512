@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Reversal Lotto</string>
-    <string name="textView4">별자리 기반 숫자 생성</string>
+    <string name="small_constell_menu_label">Constellation based number generation</string>
 </resources>
