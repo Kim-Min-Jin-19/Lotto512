@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Lotto512</string>
+    <string name="app_name">Reversal Lotto</string>
+    <string name="textView4">별자리 기반 숫자 생성</string>
 </resources>
